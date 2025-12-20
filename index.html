@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WhatsApp Auto Sender</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #25D366; /* WhatsApp green */
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #25D366;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #128C7E;
+        }
+
+        .success-message {
+            text-align: center;
+            margin-top: 15px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>WhatsApp Auto Sender</h1>
+        <form method="POST">
+            <label>Phone Numbers (comma separated):</label>
+            <input type="text" name="numbers" placeholder="e.g. 9190XXXXXX, 9179XXXXXX" required>
+
+            <label>Message:</label>
+            <textarea name="message" rows="5" placeholder="Type your message here..." required></textarea>
+
+            <input type="submit" value="Send Message">
+        </form>
+
+        
+            <div class="success-message">✅ Messages sent successfully!</div>
+       
+    </div>
+</body>
+</html>
